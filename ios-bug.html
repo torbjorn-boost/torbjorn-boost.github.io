@@ -55,10 +55,10 @@
 		<script>
 				document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!`;
 				document.querySelector('.the-area').addEventListener('focus', ()=> {
-						document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!`;
+						document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!!`;
 						setTimeout(()=>{
 								document.querySelector('.container').style.height = `${window.innerHeight}px`;
-								document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!`
+								document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!!`
 						}, 1000);
 				})
 		</script>
