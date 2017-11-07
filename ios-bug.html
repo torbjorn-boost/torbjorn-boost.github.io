@@ -45,6 +45,7 @@
 			<div class="top">
 				<textarea class="another-area" placeholder="I work fine!"></textarea>
 			</div>
+			<div id="lol"></div>
 			<div class="bottom">
 				<textarea class="the-area" placeholder="I'm acting all weird :(" rows="2"></textarea>
 				<div>I'm just a div!</div>
@@ -52,9 +53,14 @@
 		</div>
 
 		<script>
-		document.querySelector('.the-area').addEventListener('focus', ()=> {
-			setTimeout(()=>{document.querySelector('.container').style.height = `${window.innerHeight}px`;}, 1000);
-		})
+				document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!`;
+				document.querySelector('.the-area').addEventListener('focus', ()=> {
+						document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!`;
+						setTimeout(()=>{
+								document.querySelector('.container').style.height = `${window.innerHeight}px`;
+								document.querySelector('#lol').innerHTML = `window.innerHeight=${window.innerHeight}px!`
+						}, 1000);
+				})
 		</script>
 
 	</body>
